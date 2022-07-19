@@ -14,7 +14,7 @@ export default createGlobalStyle`
 			scroll-behavior: smooth !important;
     }
 		body{
-			background-color: ${COLORS.primary};
+			background-color: ${COLORS.white};
 		}
 		h1{
 			font-weight: 700;
@@ -42,26 +42,6 @@ export default createGlobalStyle`
 		ul{
 			list-style-type: none;
 		}
-		button{
-			text-transform: uppercase;
-			font-weight: 700;
-			padding: 8px 12px;
-			border: 4px solid ${COLORS.third} ;
-			border-radius: 8px;
-			cursor: pointer;
-			background-color: none;
-			color: ${COLORS.third};
-			transition: 0.2s;
-			&:hover{
-				background-color: ${COLORS.third};
-				color: ${COLORS.white};
-			}
-			&:active{
-				background-color: ${COLORS.secondary};
-				color: ${COLORS.third};
-			}
-		}
-
 `;
 // Global component Container: Just a container with a padding adjusted to the screen, helps to normalize the views.
 export const Container = styled.div`
@@ -85,4 +65,12 @@ export const Row = styled.div`
 
 export const Spacer = styled.div`
   flex-grow: 100;
+`;
+
+export const Centered = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
 `;
