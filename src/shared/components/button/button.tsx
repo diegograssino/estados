@@ -18,8 +18,8 @@ export const Button = styled.button<Props>`
   background-color: ${(props) => props.backgroundColor || 'transparent'};
   color: ${(props) => props.textColor || props.primaryColor || '#000'};
   transition: 0.2s;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
 
   &:hover {
     background-color: ${(props) => props.primaryColor || '#000'};

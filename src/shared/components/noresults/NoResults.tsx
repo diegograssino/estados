@@ -14,7 +14,7 @@ const NoResultsStyled = styled.div`
 
   .noResultIcon {
     margin-top: 36px;
-    font-size: 176px;
+    font-size: 150px;
     color: ${COLORS.primary};
   }
 `;
