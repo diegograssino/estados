@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container } from '../shared/styles/global';
 import styled from 'styled-components';
 import { COLORS } from '../helper/Constants';
 import { FaSearch } from 'react-icons/fa';
 import NoResults from '../shared/components/noresults/NoResults';
 import Results from '../shared/components/results/Results';
+import { MOCK } from '../mock/mock';
+
 const SearchBar = styled.div`
   display: flex;
   width: 100%;
@@ -40,14 +42,22 @@ const SearchResults = styled.section`
   border: 2px solid ${COLORS.secondary};
   border-radius: 8px;
   padding: 20px;
+  min-height: 300px;
   max-height: auto;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
 `;
 const MainContent = () => {
   const [searchValue, setSearchValue] = useState('');
+  const [searchResults, setSearchResults] = useState(MOCK);
 
   useEffect(() => {
-    console.log(searchValue);
+    setSearchResults(
+      MOCK.filter(
+        (m) =>
+          m.client.toUpperCase().includes(searchValue.toUpperCase()) ||
+          m.id.includes(searchValue)
+      )
+    );
   }, [searchValue]);
 
   return (
@@ -62,10 +72,10 @@ const MainContent = () => {
           />
         </SearchBar>
         <SearchResults>
-          {searchValue.length < 3 ? (
+          {searchValue.length < 2 || !searchResults.length ? (
             <NoResults />
           ) : (
-            <Results searchValue={searchValue} />
+            <Results searchResults={searchResults} />
           )}
         </SearchResults>
       </Container>

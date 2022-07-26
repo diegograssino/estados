@@ -9,7 +9,7 @@ const NavbarStyled = styled.nav`
   background-color: ${COLORS.primary};
   color: ${COLORS.white};
   margin-bottom: 20px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
   height: auto;
   span {
     font-size: 12px;

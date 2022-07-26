@@ -7,14 +7,14 @@ const FooterStyled = styled.div`
   margin-top: auto;
   background-color: ${COLORS.secondary};
   color: ${COLORS.white};
-  box-shadow: 0px -8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -8px 20px rgba(0, 0, 0, 0.15);
   height: 12vh;
   display: flex;
   justify-content: center;
   align-items: end;
   padding: 0px 0px 10px 0px;
   p {
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
     font-size: 10px;
   }
 `;
