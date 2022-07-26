@@ -47,7 +47,7 @@ const Results = (props: {
           <div className="result" key={i}>
             <div className="left">
               <span>{r.id}</span>
-              <p>{r.client}</p>
+              <p>{r.client.slice(0, 18) + '...'}</p>
             </div>
             <div className="right">
               <Button primaryColor={COLORS.third} className="btn-custom">
